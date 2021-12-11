@@ -1,0 +1,49 @@
+body {
+  background-color: rgb(174, 208, 238);
+  font-family: "Karla", sans-serif;
+}
+
+.container {
+  text-align: center;
+  display: block;
+  margin: 30px auto;
+  background-color: rgba(255, 255, 255, 0.63);
+  width: 800px;
+  border-radius: 30px;
+  border: solid 2px darkgray;
+}
+.temp {
+  color: #6e8abc;
+  font-weight: bolder;
+  font-size: 50px;
+  padding: 10px;
+}
+.units {
+  font-size: 17px;
+  position: relative;
+  top: -25px;
+}
+.place {
+  color: #113076;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+ul {
+  list-style: none;
+  line-height: 28px;
+  padding: 10px;
+}
+
+.fa-moon {
+  font-size: 72px;
+  margin: 30px;
+}
+
+.temp:hover {
+  font-size: 60px;
+}
+.footer {
+  text-align: center;
+  font-size: 12px;
+}
