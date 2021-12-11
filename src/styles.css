@@ -12,6 +12,7 @@ body {
   width: 800px;
   border-radius: 30px;
   border: solid 2px darkgray;
+  padding: 15px;
 }
 .temp {
   color: #6e8abc;
@@ -33,13 +34,12 @@ body {
 ul {
   list-style: none;
   line-height: 28px;
-  padding: 10px;
   text-transform: capitalize;
 }
 
 .icon {
   font-size: 72px;
-  margin: 30px;
+  margin: 20px;
 }
 
 .temp:hover {

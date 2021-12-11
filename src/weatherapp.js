@@ -12,7 +12,7 @@ function formatDate(timestamp) {
   ];
   let hours = date.getHours();
   if (hours < 10) {
-    hours = `0${hour}`;
+    hours = `0${hours}`;
   }
   let minutes = date.getMinutes();
   if (minutes < 10) {
@@ -56,10 +56,21 @@ function showTemperature(response) {
   );
   iconElement.setAttribute("alt", `${cityDescription}`);
 }
+
 // API connection
+function citySearch(city) {
+  let apiKey = "651edf040d549a2711ca409b8ff9c6f7";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
 
-let city = "Japan";
-let apiKey = "651edf040d549a2711ca409b8ff9c6f7";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+  axios.get(apiUrl).then(showTemperature);
+}
+//Search Engine
 
-axios.get(apiUrl).then(showTemperature);
+function handleSubmit(event) {
+  event.preventDefault();
+  let citySubmit = document.querySelector("#city-input");
+  citySearch(citySubmit.value);
+}
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);

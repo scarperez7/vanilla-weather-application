@@ -25,6 +25,17 @@
   </head>
   <body>
     <div class="container">
+        <div class= "weatherapp">
+            <form id="search-form" class="mb-1">
+                <div class="row">
+                    <div class="col-9">
+                <input type="search" placeholder="Type City Here" id="city-input"class="form-control" autocomplete="off"/>
+            </div>
+              <div class="col-3">  
+                  <input type="submit" value="Search" class="btn btn-primary w-100" /> 
+            </div>
+        </div>
+            </form>
       <div class="row">
         <div class="col-6">
           <div class="mainInfo"></div>
@@ -39,23 +50,25 @@
         </div>
 
         <div class="col-6">
-          <img src=""
+          <img src="http://openweathermap.org/img/wn/01d@2x.png"
           alt= "clear"
           id="icon"
           class= "icon">
           <p class="hiLO"> <span id="maxTemp">42°</span>|<span id="minTemp"> 28°F</span></span></p>
         </div>
       </div>
+      <p class="footer">
+        <a
+          href="https://github.com/scarperez7/vanilla-weather-application"
+          target="_blank"
+        >
+          Open-Source Code
+        </a>
+        by Scarlett Perez
+      </p>
     </div>
-    <p class="footer">
-      <a
-        href="https://github.com/scarperez7/vanilla-weather-application"
-        target="_blank"
-      >
-        Open-Source Code
-      </a>
-      by Scarlett Perez
-    </p>
+    </div>
+    
   </body>
   <script src="src/weatherapp.js"></script>
 </html>
