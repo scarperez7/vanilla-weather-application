@@ -1,6 +1,7 @@
 body {
   background-color: rgb(174, 208, 238);
   font-family: "Karla", sans-serif;
+  position: relative;
 }
 
 .container {
@@ -36,7 +37,7 @@ ul {
   text-transform: capitalize;
 }
 
-.fa-moon {
+.icon {
   font-size: 72px;
   margin: 30px;
 }

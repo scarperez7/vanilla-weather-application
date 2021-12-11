@@ -39,6 +39,7 @@ function showTemperature(response) {
   let cityDescription = response.data.weather[0].description;
   let cityName = response.data.name;
   let date = document.querySelector("#date");
+  let iconElement = document.querySelector("#icon");
 
   temp.innerHTML = `${cityTemp}°`;
   feelsLike.innerHTML = `Feels like: ${cityFeels}°`;
@@ -47,10 +48,18 @@ function showTemperature(response) {
   maxTemp.innerHTML = `${cityMax}°`;
   minTemp.innerHTML = `${cityMin}°`;
   name.innerHTML = `${cityName}`;
-  date.innerHTML = formatDate(response.data.dt);
+  date.innerHTML = formatDate(response.data.dt * 1000);
+
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", `${cityDescription}`);
 }
 // API connection
+
+let city = "Japan";
 let apiKey = "651edf040d549a2711ca409b8ff9c6f7";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=New York&appid=${apiKey}&units=imperial`;
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
 
 axios.get(apiUrl).then(showTemperature);
