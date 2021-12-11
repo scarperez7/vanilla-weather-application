@@ -33,6 +33,7 @@ ul {
   list-style: none;
   line-height: 28px;
   padding: 10px;
+  text-transform: capitalize;
 }
 
 .fa-moon {
