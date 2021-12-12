@@ -18,57 +18,81 @@
     />
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-   
 
     <link rel="stylesheet" href="src\styles.css" />
     <title>Vanilla Weather Application</title>
   </head>
   <body>
     <div class="container">
-        <div class= "weatherapp">
-            <form id="search-form" class="mb-1">
-                <div class="row">
-                    <div class="col-9">
-                <input type="search" placeholder="Type City Here" id="city-input"class="form-control" autocomplete="off"/>
+      <div class="weatherapp">
+        <form id="search-form" class="mb-1">
+          <div class="row">
+            <div class="col-9">
+              <input
+                type="search"
+                placeholder="Type City Here"
+                id="city-input"
+                class="form-control"
+                autocomplete="off"
+              />
             </div>
-              <div class="col-3">  
-                  <input type="submit" value="Search" class="btn btn-primary w-100" /> 
+            <div class="col-3">
+              <input
+                type="submit"
+                value="Search"
+                class="btn btn-primary w-100"
+              />
             </div>
-        </div>
-            </form>
-      <div class="row">
-        <div class="col-6">
-          <div class="mainInfo"></div>
-          <ul>
-            <li id="place" class="place">New York</li>
-            <li> Last Updated: <span id= "date">Friday 19:45 </span></li>
-            <li class ="temp" id="temp">37 <span class="units">°F|°C</span></li>
-            <li id="description"> Light Snow</li>
-            <li id="feels-like">Feels Like: 34°F</li>
-            <li id="humidity"> Humidity:90%</li>
-          </ul>
-        </div>
+          </div>
+        </form>
+        <div class="row">
+          <div class="col-6">
+            <div class="mainInfo"></div>
+            <ul>
+              <li id="place" class="place">New York</li>
+              <li>Last Updated: <span id="date">Friday 19:45 </span></li>
+              <li class="temp">
+                <span id="temp">37</span>
+                <span class="units">
+                  <a href="#" id="farenheight" class="active">°F</a>|
+                  <a href="#" id="celcius">°C</a>
+                </span>
+              </li>
+              <li id="description">Light Snow</li>
 
-        <div class="col-6">
-          <img src="http://openweathermap.org/img/wn/01d@2x.png"
-          alt= "clear"
-          id="icon"
-          class= "icon">
-          <p class="hiLO"> <span id="maxTemp">42°</span>|<span id="minTemp"> 28°F</span></span></p>
+              <li id="humidity">Humidity:90%</li>
+              <li id="windSpeed" class="windSpeed">Wind Speed: 3 km/h</li>
+            </ul>
+          </div>
+
+          <div class="col-6">
+            <img
+              src="http://openweathermap.org/img/wn/01d@2x.png"
+              alt="clear"
+              id="icon"
+              class="icon"
+            />
+            <ul>
+              <li>
+                <span id="maxTemp"> 42 </span> | <span id="minTemp"> 28</span>
+              </li>
+              <li>
+                <span id="feels-like"> 34 </span>
+              </li>
+            </ul>
+          </div>
         </div>
+        <p class="footer">
+          <a
+            href="https://github.com/scarperez7/vanilla-weather-application"
+            target="_blank"
+          >
+            Open-Source Code
+          </a>
+          by Scarlett Perez
+        </p>
       </div>
-      <p class="footer">
-        <a
-          href="https://github.com/scarperez7/vanilla-weather-application"
-          target="_blank"
-        >
-          Open-Source Code
-        </a>
-        by Scarlett Perez
-      </p>
     </div>
-    </div>
-    
   </body>
   <script src="src/weatherapp.js"></script>
 </html>

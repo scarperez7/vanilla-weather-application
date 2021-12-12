@@ -35,11 +35,13 @@ ul {
   list-style: none;
   line-height: 28px;
   text-transform: capitalize;
+  font-size: 17px;
 }
 
 .icon {
   font-size: 72px;
-  margin: 20px;
+  margin: 10px auto;
+  display: block;
 }
 
 .temp:hover {
@@ -48,4 +50,17 @@ ul {
 .footer {
   text-align: center;
   font-size: 12px;
+  margin: 0px;
+}
+.active {
+  text-decoration: none;
+  color: #6e8abc;
+  cursor: default;
+}
+.active:hover {
+  text-decoration: none;
+  color: #6e8abc;
+}
+.windSpeed {
+  text-transform: lowercase;
 }
