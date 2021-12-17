@@ -64,3 +64,19 @@ ul {
 .windSpeed {
   text-transform: lowercase;
 }
+.weather-forecast {
+  margin: 20px;
+  line-height: 30px;
+}
+.col-2 {
+  border: darkgray solid 0.75px;
+  border-radius: 17px;
+  padding: 30px;
+  padding-bottom: 40px;
+}
+.forecast-date {
+  text-decoration: underline;
+}
+.forecast-min {
+  color: #808285;
+}
