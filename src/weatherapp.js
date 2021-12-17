@@ -59,6 +59,35 @@ function showTemperature(response) {
   );
   iconElement.setAttribute("alt", `${cityDescription}`);
 }
+
+//Forecast
+function showForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row"> `;
+  let days = ["Friday", "Saturday", "Sunday", "Monday", "Tuesday"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      ` <div class="col-2">
+<div class="forecast-date">${day}</div>
+<div class="icon-weather">
+  <img
+    class="forecast-icon"
+    src="http://openweathermap.org/img/wn/01d@2x.png"
+    alt=""
+    width="30px"
+  />
+</div>
+<div class="forecast-temperature">
+  <span class="forecast-max">42°</span> |
+  <span class="forecast-min">39°</span>
+</div>
+</div>`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
 // API connection
 function citySearch(city) {
   let apiKey = "651edf040d549a2711ca409b8ff9c6f7";
@@ -112,7 +141,7 @@ function showFarenheightTemperature(event) {
   let fFeels = Math.round(cityFeels);
   minTemp.innerHTML = `${fMin}°`;
   maxTemp.innerHTML = `${fMax}°`;
-  feelsLike.innerHTML = `Feels Like: ${fFeels}`;
+  feelsLike.innerHTML = `Feels Like: ${fFeels}°`;
 }
 let farenheightTemp = null;
 let cityMin = null;
@@ -126,3 +155,4 @@ let farenheightLink = document.querySelector("#farenheight");
 farenheightLink.addEventListener("click", showFarenheightTemperature);
 
 citySearch("New York");
+showForecast();
