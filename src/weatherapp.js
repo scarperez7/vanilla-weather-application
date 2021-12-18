@@ -137,6 +137,7 @@ function showCelciusTemperature(event) {
   farenheightLink.classList.remove("active");
   celciusLink.classList.add("active");
   farenheightLink.style.color = "#192a50";
+  farenheightLink.style.textDecoration = "none";
 
   let celciusTemp = (5 * (farenheightTemp - 32)) / 9;
   temperatureElement.innerHTML = Math.round(celciusTemp);
