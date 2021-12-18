@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(174, 208, 238);
+  background-color: #192a50;
   font-family: "Karla", sans-serif;
   position: relative;
 }
@@ -11,8 +11,12 @@ body {
   background-color: rgba(255, 255, 255, 0.63);
   width: 800px;
   border-radius: 30px;
-  border: solid 2px darkgray;
+  border: solid 0.5px white;
   padding: 15px;
+}
+.celcius {
+  color: #192a50;
+  text-decoration: none;
 }
 .temp {
   color: #6e8abc;
@@ -32,6 +36,7 @@ body {
 }
 
 ul {
+  margin-top: 20px;
   list-style: none;
   line-height: 28px;
   text-transform: capitalize;
@@ -39,9 +44,10 @@ ul {
 }
 
 .icon {
-  font-size: 72px;
-  margin: 10px auto;
-  display: block;
+  font-size: 60px;
+  margin-right: 160px;
+  margin: 0px auto;
+  display: inline;
 }
 
 .temp:hover {
@@ -69,7 +75,8 @@ ul {
   line-height: 30px;
 }
 .col-2 {
-  border: darkgray solid 0.75px;
+  margin-top: 0px;
+  border: white solid 0.75px;
   border-radius: 17px;
   padding: 30px;
   padding-bottom: 40px;

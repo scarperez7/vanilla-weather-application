@@ -83,9 +83,11 @@ function forecastDays(timestamp) {
 function showForecast(response) {
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
-
   let date = response.data.daily;
   date.forEach(function (forecastDay, index) {
+    let fForecastMax = Math.round(forecastDay.temp.max);
+    let fForecastMin = Math.round(forecastDay.temp.min);
+
     if (index < 6) {
       forecastHTML =
         forecastHTML +
@@ -96,15 +98,11 @@ function showForecast(response) {
     class="forecast-icon"
     src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
     alt=""
-    width="30px"
+    width="20px"
   />
 </div>
 <div class="forecast-temperature">
-  <span class="forecast-max">  ${Math.round(
-    forecastDay.temp.max
-  )}°</span>|<span class="forecast-min">${Math.round(
-          forecastDay.temp.min
-        )}°</span>
+  <span class="forecast-max">  ${fForecastMax}°</span>|<span class="forecast-min">${fForecastMin}°</span>
 </div>
 </div>`;
     }
@@ -138,6 +136,8 @@ function showCelciusTemperature(event) {
   let temperatureElement = document.querySelector("#temp");
   farenheightLink.classList.remove("active");
   celciusLink.classList.add("active");
+  farenheightLink.style.color = "#192a50";
+
   let celciusTemp = (5 * (farenheightTemp - 32)) / 9;
   temperatureElement.innerHTML = Math.round(celciusTemp);
   let minTemp = document.querySelector("#minTemp");

@@ -32,7 +32,7 @@
             <div class="col-9">
               <input
                 type="search"
-                placeholder="Type City Here"
+                placeholder="Search Here"
                 id="city-input"
                 class="form-control"
                 autocomplete="off"
@@ -49,25 +49,26 @@
         </form>
         <div class="row">
           <div class="col-6">
-            <div class="mainInfo"></div>
-            <ul>
-              <li id="place" class="place">New York</li>
-              <li>Last Updated: <span id="date">Friday 19:45 </span></li>
-              <li class="temp">
-                <span id="temp">37</span>
-                <span class="units">
-                  <a href="#" id="farenheight" class="active">°F</a>|
-                  <a href="#" id="celcius">°C</a>
-                </span>
-              </li>
-              <li id="description">Light Snow</li>
+            <div class="mainInfo">
+              <ul>
+                <li id="place" class="place">New York</li>
+                <li>Last Updated: <span id="date">Friday 19:45 </span></li>
+                <li class="temp">
+                  <span id="temp">37</span>
+                  <span class="units">
+                    <a href="#" id="farenheight" class="active">°F</a>|
+                    <a href="#" id="celcius" class= "celcius">°C</a>
+                  </span>
+                </li>
+                <li id="description">Light Snow</li>
 
-              <li id="humidity">Humidity:90%</li>
-              <li id="windSpeed" class="windSpeed">Wind Speed: 3 km/h</li>
-            </ul>
+                <li id="humidity">Humidity:90%</li>
+                <li id="windSpeed" class="windSpeed">Wind Speed: 3 km/h</li>
+              </ul>
+            </div>
           </div>
-
           <div class="col-6">
+              <div class="secondaryInfo">
             <img
               src="http://openweathermap.org/img/wn/01d@2x.png"
               alt="clear"
@@ -81,9 +82,11 @@
               <li>
                 <span id="feels-like"> 34 </span>
               </li>
+            </div>
             </ul>
           </div>
         </div>
+
         <div class="weather-forecast" id="forecast">
           <div class="row">
             <div class="col-2">
@@ -93,7 +96,8 @@
                   class="forecast-icon"
                   src="http://openweathermap.org/img/wn/01d@2x.png"
                   alt=""
-                  width="30px"
+                  width="20px"
+                
                 />
               </div>
               <div class="forecast-temperature">
